@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   template: `
     <app-navigation></app-navigation>
     <div class="container-fluid skeleton-content">
-      <app-carousel [images]="images" ></app-carousel>
+    <app-about-us></app-about-us>  
+    <app-carousel [images]="images" ></app-carousel>
       <router-outlet></router-outlet>
     </div>
     <app-footer></app-footer>
