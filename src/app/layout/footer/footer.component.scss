@@ -1,0 +1,16 @@
+@import 'src/colors.scss';
+
+.footer-container{
+    height: calc(8rem - 1rem);
+    width: 100%;
+    padding: .5rem 1rem;
+    background-color: map-get($colors , "light-red" );
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+fa-icon{
+    font-size: 3rem;
+    
+}

@@ -1,0 +1,29 @@
+@import "src/colors.scss";
+.button{
+  font-weight: bold;
+  color: map-get($colors, "white");
+  margin: 0 2.5rem 0 2.5rem;
+  text-align: center;
+}
+.button:hover{
+  color: map-get($colors, "orange");
+  transition: ease-in .2s;
+}
+.menu-button {
+  font-weight: bold;
+  color: map-get($colors, "white");
+  margin: 0 2.5rem 0 2.5rem;
+  text-align: center;
+  background-image: linear-gradient(
+    map-get($colors, "orange"),
+    map-get($colors, "orange")
+  );
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.5s;
+}
+.menu-button:hover {
+  color: map-get($colors, "orange");
+  background-size: 100% 2px;  
+}

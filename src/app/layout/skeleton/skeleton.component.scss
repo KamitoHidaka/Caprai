@@ -1,0 +1,5 @@
+@import 'src/colors.scss';
+.skeleton-content{
+    background-color: map-get($colors, "blue" );
+    min-height: calc(100vh - 4rem);
+}

@@ -1,0 +1,37 @@
+@import "src/colors";
+.background{
+  height: 100vh;
+  background-image: url("/assets/fondo-nav.jpg");
+  background-size: cover;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font: 2.2rem bold;
+}
+img {
+  border-radius: 50%;
+}
+
+.phrase{
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: map-get($colors, "white" );
+  letter-spacing: .25rem;
+}
+h1{
+  font-size: 7rem;
+  font-family: 'Lato-Black';
+  padding-bottom: 3rem;
+}
+p{
+  font-family: 'Lato-Light';
+  font-weight:600;
+  font-size: 2.8rem;
+  border-bottom: solid;
+}

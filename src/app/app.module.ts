@@ -1,18 +1,38 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { SkeletonComponent } from './layout/skeleton/skeleton.component';
+import { NavigationComponent } from './layout/navigation/navigation.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './layout/footer/footer.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkeletonComponent,
+    NavigationComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
+    // Core
+    CoreModule,
+    SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
