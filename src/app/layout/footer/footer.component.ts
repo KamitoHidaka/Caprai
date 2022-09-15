@@ -5,8 +5,12 @@ import {faInstagram,faFacebook} from '@fortawesome/free-brands-svg-icons';
   selector: 'app-footer',
   template: `
     <div class="footer-container">
-      <fa-icon [icon]="faInstagram"></fa-icon>
-      <fa-icon [icon]="faFacebook"></fa-icon>
+      <a href="https://www.facebook.com/profile.php?id=100063890592729" target="_blank">
+        <fa-icon [icon]="faFacebook"></fa-icon>
+      </a>
+      <a href="https://www.instagram.com/capraia_pizzeria"  target="_blank">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </a>
     </div>
   `,
   styleUrls: ['./footer.component.scss'],

@@ -1,6 +1,6 @@
 @import 'src/colors.scss';
 .skeleton-content{
-    background-color: map-get($colors, "blue" );
+    background-color: map-get($colors, "black" );
     min-height: calc(100vh - 4rem);
-    padding: 2rem;
+    padding: 3rem;
 }

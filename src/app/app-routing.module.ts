@@ -5,12 +5,12 @@ import { SkeletonComponent } from './layout/skeleton/skeleton.component';
 const routes: Routes = [
   {
     path:'',
-    component: SkeletonComponent
+    component: SkeletonComponent,     
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash: true})],
+  imports: [RouterModule.forRoot(routes,{useHash: true, anchorScrolling:'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

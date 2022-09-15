@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <app-navigation></app-navigation>
     <div class="container-fluid skeleton-content">
     <app-about-us></app-about-us>  
-    <app-carousel [images]="images" ></app-carousel>
+    <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
       <router-outlet></router-outlet>
     </div>
     <app-footer></app-footer>
@@ -14,6 +14,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./skeleton.component.scss'],
 })
 export class SkeletonComponent {
+ 
   images = [
     {
       imageSrc: 

@@ -2,12 +2,12 @@ import { Component, Input} from '@angular/core';
 @Component({
   selector: 'app-button',
   template: `
-    <p class={{class}}>{{text}}</p>
+    <a href={{href}} class={{class}}>{{text}}</a>
   `,
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
  @Input() text='';
  @Input() class='';
-
+ @Input() href='';
 }
