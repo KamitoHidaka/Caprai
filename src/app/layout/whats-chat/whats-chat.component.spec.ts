@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrderComponent } from './order.component';
+import { WhatsChatComponent } from './whats-chat.component';
 
-describe('OrderComponent', () => {
-  let component: OrderComponent;
-  let fixture: ComponentFixture<OrderComponent>;
+describe('WhatsChatComponent', () => {
+  let component: WhatsChatComponent;
+  let fixture: ComponentFixture<WhatsChatComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrderComponent ]
+      declarations: [ WhatsChatComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OrderComponent);
+    fixture = TestBed.createComponent(WhatsChatComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,15 +8,15 @@ import { Component, Input} from '@angular/core';
       <p class="description">{{description}}</p>
       <div class="sizes">
         <div>
-          <p>Pequeña</p>
+          <p>{{small}}</p>
           <p>{{price_s}}</p>
         </div>
         <div>
-          <p>Mediana</p>
+          <p>{{medium}}</p>
           <p>{{price_m}}</p>
         </div>
         <div>
-          <p>Grande</p>
+          <p>{{large}}</p>
           <p>{{price_l}}</p>
         </div>        
       </div>
@@ -28,6 +28,9 @@ import { Component, Input} from '@angular/core';
 export class MenuCardComponent{
   @Input() title='';
   @Input() description='';
+  @Input() small='';
+  @Input() medium='';
+  @Input() large='';
   @Input() price_s='';
   @Input() price_m='';
   @Input() price_l='';

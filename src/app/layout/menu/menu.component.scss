@@ -1,0 +1,27 @@
+@import 'src/colors';
+
+.menu-container{
+    // background-color:map-get($colors,"dark-gray" ) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.title{
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: solid .2rem map-get($colors,"orange" );
+    color: map-get($colors,"orange");
+    letter-spacing: .5rem;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    background-color: black;  
+}
+.hamburger{
+    width: 50%;  
+}
