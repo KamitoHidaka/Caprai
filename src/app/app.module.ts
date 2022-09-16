@@ -11,6 +11,7 @@ import { NavigationComponent } from './layout/navigation/navigation.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AboutUsComponent } from './layout/about-us/about-us.component';
+import { OrderComponent } from './layout/order/order.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AboutUsComponent } from './layout/about-us/about-us.component';
     NavigationComponent,
     FooterComponent,
     AboutUsComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,

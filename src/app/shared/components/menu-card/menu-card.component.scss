@@ -1,0 +1,37 @@
+@import "src/colors";
+.card{
+    margin: auto;
+    background-color: transparent;
+    padding: .2rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: map-get($colors, 'white');
+    border-bottom: .2rem solid map-get($colors , 'orange');
+}       
+.title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: .7rem;
+    color: map-get($colors, "orange" );
+}
+.description{
+    width: 100%;
+    min-height: 6.5rem;
+    max-height: fit-content;
+    text-align: center;
+    font-size: 2rem
+}
+.sizes{
+    display: flex;
+}
+.sizes div{
+    text-align: center;
+    margin: .5rem;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}

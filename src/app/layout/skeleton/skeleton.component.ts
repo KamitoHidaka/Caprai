@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
     <div class="container-fluid skeleton-content">
     <app-about-us></app-about-us>  
     <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
+    <app-order></app-order>
       <router-outlet></router-outlet>
     </div>
     <app-footer></app-footer>

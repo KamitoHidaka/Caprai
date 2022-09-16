@@ -1,5 +1,6 @@
 @import "src/colors.scss";
 .button{
+  text-decoration: none;
   font-weight: bold;
   color: map-get($colors, "white");
   margin: 0 2.5rem 0 2.5rem;
@@ -10,6 +11,7 @@
   transition: ease-in .2s;
 }
 .menu-button {
+  text-decoration: none;
   font-weight: bold;
   color: map-get($colors, "white");
   margin: 0 2.5rem 0 2.5rem;
