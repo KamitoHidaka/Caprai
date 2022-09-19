@@ -3,7 +3,7 @@
 .contact-container{
     background-color: map-get($colors,"white");
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     padding: 10rem;
@@ -37,11 +37,7 @@
 fa-icon{
     font-size: 8rem;
 }
-.or-container{
-    padding: 3rem;
-    font-size: 3rem;
-    font-weight: bold;
-}
+
 img{
     width: 80%;
 }

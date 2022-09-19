@@ -11,10 +11,6 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
           <p>Haz Clcik para Chatear</p>
         </a>
       </div>
-      <div class="or-container">
-        <p>O</p>
-        <p>Escane Nuestro Codigo</p>
-      </div>
       <div class="qr-container">
         <img class="qr" src="assets/qr_campos.png" />
       </div>
