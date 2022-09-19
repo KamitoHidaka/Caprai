@@ -3,9 +3,9 @@ import { Component, Input} from '@angular/core';
 @Component({
   selector: 'app-menu-card',
   template: `
-    <div class="card">
+    <div class={{class_card}}>
       <p class="title">{{title}}</p>
-      <p class="description">{{description}}</p>
+      <p class={{class_description}}>{{description}}</p>
       <div class="sizes">
         <div>
           <p>{{small}}</p>
@@ -26,8 +26,11 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./menu-card.component.scss']
 })
 export class MenuCardComponent{
+  
+  @Input() class_card='';
   @Input() title='';
   @Input() description='';
+  @Input() class_description='';
   @Input() small='';
   @Input() medium='';
   @Input() large='';

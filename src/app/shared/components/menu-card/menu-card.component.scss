@@ -11,7 +11,14 @@
     justify-content: center;
     align-items: center;
     color: map-get($colors, 'white');
+    border: none;
     border-bottom: .2rem solid map-get($colors , 'orange');
+}
+.small_card{
+    width: 20rem;   
+}
+.large_card{
+    width: 40rem;
 }       
 .title{
     font-size: 2.2rem;
@@ -24,6 +31,14 @@
     min-height: 6.5rem;
     max-height: fit-content;
     text-align: center;
+    font-size: 2rem
+}
+.small_description{
+    width: 100%;
+    min-height: 1rem;
+    max-height: fit-content;
+    text-align: center;
+    line-height: .5rem;
     font-size: 2rem
 }
 .sizes{

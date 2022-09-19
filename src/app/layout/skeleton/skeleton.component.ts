@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-skeleton',
   template: `
     <app-navigation></app-navigation>
-    <div class="container-fluid skeleton-content">
+    <div class="skeleton-content">
     <app-about-us></app-about-us>  
     <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
     <app-whats-chat></app-whats-chat>
@@ -16,6 +15,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./skeleton.component.scss'],
 })
 export class SkeletonComponent {
+
  
   images = [
     {

@@ -1,0 +1,49 @@
+@import "src/colors";
+
+.contact-container{
+    background-color: map-get($colors,"white");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10rem;
+    scroll-margin-top: 10rem;
+}
+.chat-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.chat-button{
+    background-color: map-get($colors, "teal-green-dark" );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: map-get($colors, "white" );
+    font-weight: bold;
+    padding: 3rem;
+    border-radius: 2rem;
+    
+}
+.chat-button:hover{
+    background-color: map-get($colors, "light-green" );  
+    transition: ease-in .3s;
+    p{
+        border-bottom: .2rem solid map-get($colors, "white" );
+    }
+}
+fa-icon{
+    font-size: 8rem;
+}
+.or-container{
+    padding: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+img{
+    width: 80%;
+}
+
+

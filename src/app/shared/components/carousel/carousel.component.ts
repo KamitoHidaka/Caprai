@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 interface carouselImage {
   imageSrc: string;
@@ -17,49 +21,69 @@ interface carouselImage {
         class="fade-animation"
       />
       <div *ngIf="indicators" class="carousel-dot">
-        <span 
-          *ngFor="let dot of images; let i = index" 
+        <span
+          *ngFor="let dot of images; let i = index"
           class="dot "
-          [ngClass]="{'active': selectedIndex === i}"  
-          (click)="selectImage(i)"      
-        > </span>
+          [ngClass]="{ active: selectedIndex === i }"
+          (click)="selectImage(i)"
+        >
+        </span>
+      </div>
+
+      <div
+        *ngIf="controls"
+        class="button-carousel button-prev"
+        (click)="onPrevClick()"
+      >
+        <fa-icon class="icon-carousel" [icon]="faCircleArrowLeft"></fa-icon>
+      </div>
+      <div
+        *ngIf="controls"
+        class="button-carousel button-next"
+        (click)="onNextClick()"
+      >
+        <fa-icon class="icon-carousel" [icon]="faCircleArrowRight"></fa-icon>
       </div>
     </div>
   `,
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements OnInit{
+export class CarouselComponent implements OnInit {
+  faCircleArrowLeft = faCircleArrowLeft;
+  faCircleArrowRight = faCircleArrowRight;
+
   @Input() images: carouselImage[] = [];
   @Input() indicators = true;
+  @Input() controls = true;
   @Input() autoSlide = false;
-  @Input() slideInterval =  3500; // 4 seconds
-  
+  @Input() slideInterval = 3500; // 4 seconds
+
   selectedIndex = 0;
 
   ngOnInit(): void {
-    if(this.autoSlide){
+    if (this.autoSlide) {
       this.autoSlideImages();
     }
   }
-  autoSlideImages(): void{
-    setInterval( () => {
+  autoSlideImages(): void {
+    setInterval(() => {
       this.onNextClick();
-    }, this.slideInterval); 
+    }, this.slideInterval);
   }
-  selectImage(index:number): void{
+  selectImage(index: number): void {
     this.selectedIndex = index;
   }
-  onNextClick():void{
-    if(this.selectedIndex === this.images.length - 1){
-      this.selectedIndex=0;
-    }else{
+  onNextClick(): void {
+    if (this.selectedIndex === this.images.length - 1) {
+      this.selectedIndex = 0;
+    } else {
       this.selectedIndex++;
     }
   }
-  onPrevClick():void{
-    if(this.selectedIndex === 0){
+  onPrevClick(): void {
+    if (this.selectedIndex === 0) {
       this.selectedIndex = this.images.length - 1;
-    }else{
+    } else {
       this.selectedIndex--;
     }
   }

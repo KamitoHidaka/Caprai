@@ -3,10 +3,12 @@ html{
     /*Esto es Reset para esl uso de Rems ejemplo 16px son ahora 1.6rem*/
     font-size: 62.5%; 
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-div[id]{
-    scroll-margin-top: 10rem ;
+a{
+    text-decoration: none;
 }
+
 @font-face{
     font-family: 'Lato';
     src: url('assets/fonts/Lato-Regular.ttf');
