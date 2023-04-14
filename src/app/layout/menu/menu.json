@@ -41,7 +41,7 @@
         {
             "name": "Bacon Cheeseburger",
             "description": "Beef patty, bacon, cheddar cheese, lettuce, tomato, and onion",
-            "image": "../../../assets/menu/hamburguesa.jpeg",
+            "image": "assets/menu/hamburguesa.jpeg",
             "price": "$10.99"
         },
         {
