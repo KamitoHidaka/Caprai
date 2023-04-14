@@ -55,7 +55,7 @@ export class CarouselComponent implements OnInit {
   @Input() images: carouselImage[] = [];
   @Input() indicators = true;
   @Input() controls = true;
-  @Input() autoSlide = false;
+  @Input() autoSlide = true;
   @Input() slideInterval = 3500; // 4 seconds
 
   selectedIndex = 0;

@@ -13,19 +13,21 @@
 .menu-button {
   text-decoration: none;
   font-weight: bold;
-  color: map-get($colors, "white");
+  color: map-get($colors, "dark-orange");
   margin: 0 2.5rem 0 2.5rem;
   text-align: center;
   background-image: linear-gradient(
-    map-get($colors, "orange"),
-    map-get($colors, "orange")
+    map-get($colors, "light-orange"),
+    map-get($colors, "light-orange")
   );
+  // font-family: 'DancingScript';
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  background-size: 0% 2px;
+  background-size: 0% 1rem;
   transition: background-size 0.5s;
+  
 }
 .menu-button:hover {
-  color: map-get($colors, "orange");
+  color: map-get($colors, "light-orange");
   background-size: 100% 2px;  
 }

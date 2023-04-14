@@ -12,7 +12,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AboutUsComponent } from './layout/about-us/about-us.component';
 import { MenuComponent } from './layout/menu/menu.component';
-import { WhatsChatComponent } from './layout/whats-chat/whats-chat.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { WhatsChatComponent } from './layout/whats-chat/whats-chat.component';
     FooterComponent,
     AboutUsComponent,
     MenuComponent,
-    WhatsChatComponent,
   ],
   imports: [
     BrowserModule,

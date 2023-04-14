@@ -15,6 +15,9 @@ import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
       <a href="https://www.instagram.com/capraia_pizzeria" target="_blank">
         <fa-icon [icon]="faInstagram"></fa-icon>
       </a>
+
+      <a href="">
+      </a>
     </div>
   `,
   styleUrls: ['./footer.component.scss'],

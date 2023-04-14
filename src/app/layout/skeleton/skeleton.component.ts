@@ -1,37 +1,49 @@
 import { Component } from '@angular/core';
+import { faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-skeleton',
   template: `
-    <app-navigation></app-navigation>
-    <div class="skeleton-content">
-    <app-about-us></app-about-us>  
-    <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
-    <app-whats-chat></app-whats-chat>
-    <app-menu></app-menu>
-      <router-outlet></router-outlet>
-    </div>
-    <app-footer></app-footer>
+  <div class="root">
+      <div class="skeleton-content">
+        <app-navigation></app-navigation>
+        <app-about-us></app-about-us>
+        <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
+        <app-menu></app-menu>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+        <fa-icon
+          (click)="toHome()"
+          class="arrow_up"
+          [icon]="faCircleArrowUp"
+        ></fa-icon>
+      </div>
+      </div>
   `,
   styleUrls: ['./skeleton.component.scss'],
 })
 export class SkeletonComponent {
+  faCircleArrowUp = faCircleArrowUp;
 
- 
+  toHome() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
   images = [
     {
-      imageSrc: 
-        'https://i.ibb.co/f2t0pcr/img1.jpg',
+      imageSrc: '/assets/pizza.jpg',
       imageAlt: 'imagen1',
     },
     {
-      imageSrc: 
-        'https://i.ibb.co/BqxxVDB/img2.jpg',
-      imageAlt: 'imagen3',
+      imageSrc: '/assets/img2.jpg',
+      imageAlt: 'imagen2',
     },
     {
-      imageSrc: 
-        'https://i.ibb.co/cQd9sYL/img3.jpg',
+      imageSrc: '/assets/img3.jpg',
       imageAlt: 'imagen3',
     },
-  ]
+  ];
 }

@@ -1,141 +1,39 @@
 import { Component } from '@angular/core';
+import menuData from './menu.json';
+
+interface MenuItem {
+  name: string;
+  description: string;
+  image: string;
+  price: string;
+}
 
 @Component({
   selector: 'app-menu',
-  template: `
-    <div id="menu" class="menu-container">
-
-      <!------ PIZZA ------>
-      
-      <p class="title">PIZZAS</p>
-      <div class="cards-container">
-        <app-menu-card
-          class_card="card"
-          title="CAPRAI"
-          class_description="description"
-          description="carne, pollo, tocineta, maiz, aceitunas, oregano"
-          small="Pequeña"
-          medium="Mediana"
-          large="Grande"
-          price_s="$12.000"
-          price_m="$19.000"
-          price_l="$28.000"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card"
-          title="MEXICANA"
-          class_description="description"
-          description="carne, frijolitos, tomate, maiz, cebolla, jalapeños"
-          small="Pequeña"
-          medium="Mediana"
-          large="Grande"
-          price_s="$12.000"
-          price_m="$19.000"
-          price_l="$28.000"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card"
-          title="TROPICAL"
-          class_description="description"
-          description="piña, jamonm, cervecero"
-          small="Pequeña"
-          medium="Mediana"
-          large="Grande"
-          price_s="$12.000"
-          price_m="$16.000"
-          price_l="$25.000"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card"
-          title="BARBACOA"
-          class_description="description"
-          description="carne, tocineta, tomate, salsa de la casa"
-          small="Pequeña"
-          medium="Mediana"
-          large="Grande"
-          price_s="$12.000"
-          price_m="$19.000"
-          price_l="$28.000"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card"
-          title="VEGETARIANA"
-          class_description="description"
-          description="chapiñones, platano, maiz, aceitunas, oregano"
-          small="Pequeña"
-          medium="Mediana"
-          large="Grande"
-          price_s="$12.000"
-          price_m="$16.000"
-          price_l="$25.000"
-        ></app-menu-card>
+  template:`
+   <div class="menu" id="menu">
+     <div class="menu-category" *ngFor="let category of menuItems">
+       <h2 class="category-title">{{ category.category }}</h2>
+       <ul class="cards-container">
+         <li *ngFor="let item of category.items" class="card">
+           <img src="{{ item.image }}" alt="{{ item.name }}">
+           <h3 class="title">{{ item.name }}</h3>
+           <p class="description">{{ item.description }}</p>
+           <p class="price">{{item.price}}</p>
+          </li>
+        </ul>
       </div>
-  
-      <!------ HAMBURGUESAS ------>
-      
-      <p class="title">HAMBURGUESAS</p>
-      <div class="cards-container cards-container-large hamburger">
-        <app-menu-card
-          class_card="card large_card"
-          title="CAPRAIA"
-          class_description="description"
-          description="carne de res artesanal, patacon,tomate, cebolla, tocineta, queso, papas a la francesa y gaseosa personal"
-          small="Precio"
-          price_s="$14.000"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card large_card"
-          title="CAPRAIA"
-          class_description="description"
-          description="tortilla, pechuga a la plancha, tocineta, aguacate, tomate, cebolla, queso, y gaseosa personal"
-          small="Precio"
-          price_s="$13.000"
-        ></app-menu-card>
-      </div>
-
-      <!------ BEBIDAS ------>
-
-      <p class="title">BEBIDAS</p>
-      <div class="cards-container bebidas">
-        <app-menu-card
-          class_card="card small_card"
-          description="Gaseosa 1.5L"
-          class_description="small_description"
-          price_s="$4.800"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card small_card"
-          description="Gaseosa Personal"
-          class_description="small_description"
-          price_s="$2.500"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card small_card" 
-          description="Te" 
-          class_description="small_description"
-          price_s="$2.500"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card small_card" 
-          description="Aromatica" 
-          class_description="small_description"
-          price_s="$2.000"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card small_card"
-          description="Milo Caliente"
-          class_description="small_description"
-          price_s="$3.500"
-        ></app-menu-card>
-        <app-menu-card
-          class_card="card small_card" 
-          description="Capuccino"
-          class_description="small_description" 
-          price_s="$2.000"
-        ></app-menu-card>
-      </div>
-    </div>
+    </div> 
   `,
-  styleUrls: ['./menu.component.scss'],
+  styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {}
+  
+  export class MenuComponent {
+    menuItems: { category: string, items: MenuItem[] }[] = [];
+  
+    constructor() {
+      for (const [category, items] of Object.entries(menuData)) {
+        this.menuItems.push({ category, items });
+      }
+    }
+  }

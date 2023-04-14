@@ -1,5 +1,36 @@
-@import 'src/colors.scss';
-.skeleton-content{
-    background-color: map-get($colors, "black" );
-    min-height: calc(100vh - 4rem);
+@import "src/colors.scss";
+.root {
+  background-image: url('/assets/Fondo-Lienzo.jpg');
+  background-size: contain;
+  background-repeat:repeat-y;
+  // background-color: map-get($colors, "white");
+}
+
+.skeleton-content {
+  max-width: 1920px;
+  min-width: 720px;
+  margin: auto;
+
+  // min-height: calc(100vh - 4rem);
+}
+.arrow_up {
+  font-size: 5rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  color: map-get($colors, "orange");
+  padding: 1rem;
+  opacity: 0.8;
+}
+
+.arrow_up:hover {
+  opacity: 0.5;
+  transition: ease 0.3s;
+}
+
+@media screen and (max-width:1240px){
+  
+  .arrow_up{
+    font-size: 2.8rem;
+  }
 }

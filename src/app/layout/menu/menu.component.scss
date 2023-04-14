@@ -1,37 +1,67 @@
-@import 'src/colors';
+@import "src/colors";
 
-.menu-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-    margin: auto;
+.category-title {
+  font-size: 4rem;
+  font-weight: bold;
+  border-bottom: solid 0.4rem map-get($colors, "orange");
+  color: map-get($colors, "orange");
+  letter-spacing: 0.5rem;
+  margin: 3rem;
+  text-align: center;
 }
-.title{
-    font-size: 3rem;
-    font-weight: bold;
-    border-bottom: solid .2rem map-get($colors,"orange" );
-    color: map-get($colors,"orange");
-    letter-spacing: .5rem;
-    margin: 3rem;
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: map-get($colors, "orange");
 }
-.cards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem,1fr));
-    align-content: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-}
-.cards-container-large{
-    grid-template-columns: repeat(auto-fit, minmax(40rem,1fr));
-}
-.hamburger{
-    width: 80%;  
+.cards-container {
+  // width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
+  gap: 1rem;
+
 }
 
-.bebidas{
-    width: 80%;
+.card {
+  background-color: transparent;
+  width: 35rem;
+  text-align: center;
+  color: map-get($colors, "black");
+  border: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  margin: auto;
+
+}
+.price {
+  border-bottom: 0.4rem solid map-get($colors, "orange");
+  font-size: 2.5rem;
+  min-height: 3rem;
+  display: flex;
+  align-self: center;
+}
+.description {
+  min-height: 10rem;
+  text-align: left;
+  font-size: 2.5rem;
+}
+img {
+  border-radius: 1rem;
+  width: 100%;
 }
 
-
-
+@media screen and (max-width: 1240px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description{
+    font-size: 1.8rem;
+  }
+  .price{
+    font-size: 2rem;
+  }
+  .card {
+    width: 22rem;
+  }
+}

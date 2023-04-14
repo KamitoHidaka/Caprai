@@ -1,48 +1,65 @@
-@import '/src/colors.scss';
+@import "/src/colors.scss";
 
-.about-container{
-    display: grid;
-    line-height: 1.6rem;
-    padding: 1rem;  
-    grid-template-areas: 
-    "us us info";
-    width: 90%;
-    margin: auto;
-    color: map-get($colors, "light-orange" );
-    scroll-margin-top: 9rem;
-    height: 70vh;
+.about-container {
+  display: grid;
+  line-height: 2rem;
+  padding: 1rem;
+  grid-template-areas: "us us info";
+  width: 90%;
+  margin: auto;
+  color: map-get($colors, "dark-orange");
+  scroll-margin-top: 9rem;
+  height: 60rem;
+  font-weight: bold;
+
 }
-.about-container div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // display: grid;
-    align-items: start;
-    padding: 3rem;
-} 
-.us{
-    text-align: center;
-    font-size: 3rem;
-    line-height: 3.5rem;
-    text-align: justify;
+.about-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  padding: 3rem;
 }
-.info{
-    font-size: 2rem;
+.us {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  text-align: justify;
+}
+h2 {
+  text-align: center;
+  line-height: 10rem;
+  font-size: 6rem;
+  font-weight: bold;
+}
+.info {
+  
+  font-size: 2.5rem;
+  line-height: 2.5rem;
 }
 
-h2{
-    margin:auto;
-    line-height: 10rem;
+.title-section {
+  font-size: 3.2rem;
+}
+.text {
+  color: map-get($colors, "black");
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 1240px) {
+  .about-container{
+    height: 50rem;
+  }
+  .us {
+    font-size: 2.5rem;
+  }
+  h2{
     font-size: 5rem;
-}
-.title_section{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.text{
-    color:map-get($colors,"white" ) ;
-}
-
-section{
-    padding: 1rem;
+  }
+  .title-section{
+    font-size: 2.6rem;
+  }
+  .info{
+    font-size: 1.9rem;
+  }
 }

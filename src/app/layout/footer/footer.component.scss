@@ -2,24 +2,30 @@
 
 .footer-container {
   // height: calc(10rem - 1rem);
-  height: 20vh;
-  width: 100%;
+  min-height: 14rem;
   padding: 0.5rem 1rem;
   background-color: map-get($colors, "light-black");
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 2.5rem;
+  // line-height: 2.5rem;
 
-  fa-icon {
-    font-size: 5rem;
-    padding: 2rem;
-    color: map-get($colors, "dark-white");
-  }
+}
 
-  fa-icon:hover {
-    transition: ease-in 0.3s;
-    color: map-get($colors, "dark-gray");
+fa-icon {
+  font-size: 5rem;
+  padding: 2rem;
+  color: map-get($colors, "dark-white");
+}
+
+fa-icon:hover {
+  transition: ease-in 0.3s;
+  color: map-get($colors, "dark-gray");
+}
+
+@media screen and (max-width: 1240px) {
+  
+  fa-icon{
+    font-size: 3.5rem;
   }
 }
