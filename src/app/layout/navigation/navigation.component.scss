@@ -1,7 +1,7 @@
 @import "src/colors.scss";
 .background{
   // min-height: 70rem;
-  background-image: url('/assets/portada-2.png');
+  background-image: url('../../../assets/portada-2.png');
   background-size: cover;
 
 }
@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   font: 2.5rem bold;
-  background-image: url('/assets/Fondo-Lienzo.jpg');
+  background-image: url('../../../assets/Fondo-Lienzo.jpg');
   background-size: cover;
 }
 img {

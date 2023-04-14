@@ -34,15 +34,15 @@ export class SkeletonComponent {
 
   images = [
     {
-      imageSrc: '/assets/pizza.jpg',
+      imageSrc: '../../../assets/pizza.jpg',
       imageAlt: 'imagen1',
     },
     {
-      imageSrc: '/assets/img2.jpg',
+      imageSrc: '../../../assets/img2.jpg',
       imageAlt: 'imagen2',
     },
     {
-      imageSrc: '/assets/img3.jpg',
+      imageSrc: '../../../assets/img3.jpg',
       imageAlt: 'imagen3',
     },
   ];
